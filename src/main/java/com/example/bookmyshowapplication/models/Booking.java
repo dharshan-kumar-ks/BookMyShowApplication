@@ -1,8 +1,7 @@
 package com.example.bookmyshowapplication.models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
@@ -10,6 +9,9 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "booking")
 public class Booking extends BaseModel {
     // 1 Booking can have multiple Shows
