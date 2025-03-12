@@ -25,4 +25,7 @@ public class Seat extends BaseModel {
     private SeatType seatType;
     // @Enumerated(EnumType.STRING) -> the seatType will be stored as 'GOLD', 'SILVER', 'PREMIUM' in the DB as strings
 
+    // Defining getter since there is some problem with Lombok
+    public int getRow() { return row; }
+    public int getCol() { return col; }
 }

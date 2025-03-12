@@ -23,4 +23,11 @@ public class ShowSeat extends BaseModel {
     @Enumerated
     private ShowSeatStatus showSeatStatus;
 
+    // Defining getter since there is some problem with Lombok
+    public Seat getSeat() { return seat; }
+    public int getPrice() { return price; }
+    public Show getShow() { return show; }
+    public ShowSeatStatus getShowSeatStatus() { return showSeatStatus; }
+    public void setShowSeatStatus(ShowSeatStatus showSeatStatus) { this.showSeatStatus = showSeatStatus; }
+
 }

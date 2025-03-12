@@ -6,6 +6,7 @@ import com.example.bookmyshowapplication.models.ShowSeat;
 import com.example.bookmyshowapplication.models.ShowSeatStatus;
 import com.example.bookmyshowapplication.repository.BookingRepository;
 import com.example.bookmyshowapplication.repository.ShowSeatRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +15,7 @@ import java.time.ZoneOffset;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class BookingService {
     BookingRepository bookingRepository;
     ShowSeatRepository showSeatRepository;

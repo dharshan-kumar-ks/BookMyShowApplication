@@ -3,9 +3,11 @@ package com.example.bookmyshowapplication.repository;
 import com.example.bookmyshowapplication.models.Show;
 import com.example.bookmyshowapplication.models.ShowSeat;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 // JpaRepository<ShowSeat, Long>
 // 1st parameter (ShowSeat) -> tells Spring Data JPA that this repository is responsible for performing CRUD operations on the ShowSeat entity
 // 2nd parameter (Long) -> specifies the type of the primary key (ID) of the entity.
