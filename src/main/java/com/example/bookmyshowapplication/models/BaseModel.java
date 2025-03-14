@@ -3,6 +3,7 @@ package com.example.bookmyshowapplication.models;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
 
@@ -10,6 +11,8 @@ import java.util.Date;
 // allows you to extract common attributes or behavior into a superclass, which are then inherited by subclasses that are entities.
 // superclass itself is not mapped to a database table, but its attributes are included in the tables of its subclasses
 @MappedSuperclass
+// marking this class to listen to JPAAuditing -> the attributes with annotations like @CreatedDate & @LastModifiedDate will update its values based on the object lifecycle
+@EntityListeners(AuditingEntityListener.class)
 public class BaseModel {
     // marks this class attribute as the primary key of the table
     @Id
@@ -19,7 +22,6 @@ public class BaseModel {
     @Column(name = "id", nullable = false) // nullable is 'false' by default
     private Long id;
 
-    /*
     // @CreatedDate & @LastModifiedDate -> annotations are used with JPA auditing to automatically set the creation and modification timestamps when an entity is created or updated.
     @CreatedDate
     @Temporal(TemporalType.TIME)
@@ -28,5 +30,4 @@ public class BaseModel {
     @LastModifiedDate
     @Temporal(TemporalType.TIME)
     private Date lastModifiedAt;
-     */
 }

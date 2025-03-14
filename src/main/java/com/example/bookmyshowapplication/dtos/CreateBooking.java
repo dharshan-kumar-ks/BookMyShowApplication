@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.util.List;
 
+// DTOs (Data Transfer Objects) are a design pattern used in Spring Boot applications to transfer data between different layers -> between the service layer and the controller layer.
 @Getter
 @Setter
 @Data
